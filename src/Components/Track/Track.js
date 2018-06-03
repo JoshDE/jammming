@@ -6,8 +6,11 @@ import './Track.css';
 class Track extends React.Component {
   constructor(props) {
     super(props)
-    this.addTrack = this.addTrack.bind(this)
   }
+
+addTrack(){
+  
+}
 
 renderAction(isRemoval) {
   if (isRemoval === true) {
@@ -21,10 +24,10 @@ renderAction(isRemoval) {
     return (
       <div className="Track">
   <div className="Track-information">
-    <h3><!-- track name will go here --></h3>
-    <p><!-- track artist will go here--> | <!-- track album will go here --></p>
+    <h3></h3>
+    <p></p>
   </div>
-  <a className="Track-action">{renderAction}</a>
+  <a className="Track-action">{this.renderAction()}</a>
 </div>
     )
   }
