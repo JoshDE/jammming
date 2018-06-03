@@ -6,19 +6,14 @@ import './Track.css';
 class Track extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { searchResults: [
-      name,
-      artist,
-      album,
-      id
-    ]}
+    this.addTrack = this.addTrack.bind(this)
   }
 
 renderAction(isRemoval) {
   if (isRemoval === true) {
-    return '-'
+    return <a> - </a>
   } else {
-    return '+'
+    return <a onClick={this.addTrack} > + </a>
   }
 }
 
