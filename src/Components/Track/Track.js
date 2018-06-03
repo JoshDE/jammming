@@ -14,11 +14,15 @@ addTrack(){
   this.props.onAdd(this.props.track)
 }
 
+removeTrack(){
+  this.props.onRemove(this.props.track)
+}
+
 renderAction(isRemoval) {
   if (isRemoval === true) {
-    return <a> - </a>
+    return <a onClick={this.removeTrack}> - </a>
   } else {
-    return <a onClick={this.addTrack} > + </a>
+    return <a onClick={this.addTrack}> + </a>
   }
 }
 
