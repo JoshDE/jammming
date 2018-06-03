@@ -6,10 +6,12 @@ import './Track.css';
 class Track extends React.Component {
   constructor(props) {
     super(props)
+
+    this.addTrack = this.addTrack.bind(this)
   }
 
 addTrack(){
-  
+  this.props.onAdd(this.props.track)
 }
 
 renderAction(isRemoval) {

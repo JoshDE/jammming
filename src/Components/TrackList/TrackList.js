@@ -10,11 +10,16 @@ class TrackList extends React.Component {
   render() {
     return (
       <div className="TrackList">
-    {this.props.tracks.map(track => { {this.props.tracks.name}{this.props.tracks.artist}
-  {this.props.tracks.album}}
+    {
+      this.props.tracks.map(track => {
+        return <Track track={track}
+          key={track.id}
+          onAdd={this.props.onAdd}
+          isRemoval={this.props.isRemoval}
+
+        />}
     )
   }
-  <Track onAdd={this.props.onAdd}/>
   </div>)}}
 
 export default TrackList;
