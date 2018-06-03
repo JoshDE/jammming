@@ -10,9 +10,9 @@ class TrackList extends React.Component {
   render() {
     return (
       <div className="TrackList">
-    {this.props.tracks.map((track) => (key={track.id} {his.props.track.name}
-    {his.props.track.artist}
-  {his.props.track.album))}
+    {this.props.tracks.map((track) => (key={track.id} {this.props.track.name}
+    {this.props.track.artist}
+  {this.props.track.album))}
 </div>
     )
   }
