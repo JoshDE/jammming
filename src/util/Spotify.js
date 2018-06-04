@@ -1,10 +1,10 @@
 import React from 'react';
 
-let token = null
-let Spotify = {
-getAccessToken(){
-  if (token != null){
-    return token
+let accessToken = 
+const Spotify = {
+  getAccessToken() {
+    if (accessToken) {
+      return accessToken;
     }
   }
 }
