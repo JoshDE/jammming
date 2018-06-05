@@ -2,7 +2,7 @@
 import React from 'react';
 
 const clientID = '66dfc0b63548426ca239e707ffa3ab55'
-const redirectURI = "jammming.surge.sh"
+const redirectURI = "http://jammming.surge.sh/"
 
 let accessToken;
 let expiresIn;
@@ -21,6 +21,7 @@ const Spotify = {
     } else {window.location = `https://accounts.spotify.com/authorize?client_id=${clientID}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirectURI}`}
   },
 search(term) {
+   const accessToken = Spotify.getAccessToken();
     fetch(`https://api.spotify.com/v1/search?type=track&q=${term}`, {
     headers: {Authorization: `Bearer ${accessToken}`}
   }).then(response => {
