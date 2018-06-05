@@ -28,9 +28,9 @@ constructor(props){
 }
 
 search(term){
-    Spotify.search(term).then(searchResults => {
+    Spotify.search(term); searchResults => {
       this.setState({searchResults: searchResults});
-    });
+    };
   }
 
 savePlaylist(){
