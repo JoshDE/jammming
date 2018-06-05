@@ -19,7 +19,7 @@ const Spotify = {
       window.history.pushState('Access Token', null, '/');
     } else {window.location = `https://accounts.spotify.com/authorize?client_id=${clientID}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirectURI}`}
   }
-}
+};
 
 search(term) {
   fetch(`https://api.spotify.com/v1/search?type=track&q=${term}`, {
@@ -40,7 +40,7 @@ search(term) {
       }));
     })
   }
-}
+};
 
 savePlaylist(name, trackUris) {
     if (!name || !trackUris.length) {
