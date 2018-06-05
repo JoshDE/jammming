@@ -19,7 +19,7 @@ removeTrack(){
 }
 
 renderAction(isRemoval) {
-  if (isRemoval === true) {
+  if (isRemoval) {
     return <a onClick={this.removeTrack}> - </a>
   } else {
     return <a onClick={this.addTrack}> + </a>
